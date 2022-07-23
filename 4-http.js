@@ -5,6 +5,7 @@ const fs = require("fs")
 const server = http.createServer((req,res)=>{
 
     if(req.url==="/"){
+
         fs.readFile("index.html","utf8",(err, data)=>{
             if(err) throw err
             res.write(data)
